@@ -89,3 +89,4 @@ st.dataframe(df_filtrado_periodo)
 
 st.markdown("---") 
 st.markdown("Desenvolvido por: Pimentel (© 2025) | [GitHub](https://github.com/jespimentel) | [LinkedIn](https://www.linkedin.com/in/jespimentel/)", unsafe_allow_html=True)
+# Fim do código
