@@ -58,7 +58,7 @@ df_line = df_filtrado_periodo.reset_index().melt(id_vars='Ano', var_name='Cargo'
 
 # --- Exibição dos Gráficos ---
 
-st.header("Gráfico de Linhas")
+st.header("Evolução no período")
 fig_line = px.line(
     df_line,
     x='Ano',
@@ -70,7 +70,7 @@ fig_line = px.line(
 fig_line.update_xaxes(tickmode='linear') # Garante que todos os anos sejam exibidos se houver dados
 st.plotly_chart(fig_line, use_container_width=True)
 
-st.header("Gráfico de Barras")
+st.header("Acumulado por Cargo")
 # Calcular o total (ou média) para o gráfico de barras
 df_bar = df_filtrado_periodo.sum().reset_index()
 df_bar.columns = ['Cargo', 'Total']
@@ -89,4 +89,3 @@ st.dataframe(df_filtrado_periodo)
 
 st.markdown("---") 
 st.markdown("Desenvolvido por: Pimentel (© 2025) | [GitHub](https://github.com/jespimentel) | [LinkedIn](https://www.linkedin.com/in/jespimentel/)", unsafe_allow_html=True)
-# Fim do código
