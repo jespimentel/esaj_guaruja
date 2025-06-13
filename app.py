@@ -73,6 +73,7 @@ st.plotly_chart(fig_line, use_container_width=True)
 st.header("Acumulado por Cargo")
 # Calcular o total (ou média) para o gráfico de barras
 df_bar = df_filtrado_periodo.sum().reset_index()
+df_bar = df_bar.sort_values(by='Total', ascending=False) # ordena o dataframe
 df_bar.columns = ['Cargo', 'Total']
 
 fig_bar = px.bar(
@@ -80,7 +81,8 @@ fig_bar = px.bar(
     x='Cargo',
     y='Total',
     title=f'Interação por Cargo no Período ({ano_inicial}-{ano_final})',
-    labels={'Total': 'Total de Registros'}
+    labels={'Total': 'Total de Registros'},
+    color_discrete_sequence=['darkred'],
 )
 st.plotly_chart(fig_bar, use_container_width=True)
 
