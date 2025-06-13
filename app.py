@@ -93,7 +93,7 @@ fig_line = px.line(
 fig_line.update_xaxes(tickmode='linear') # Garante que todos os anos sejam exibidos se houver dados
 st.plotly_chart(fig_line, use_container_width=True)
 
----
+# ---
 
 # Gráfico de Barras: Acumulado por Cargo
 st.header("Acumulado por Cargo")
@@ -114,7 +114,7 @@ fig_bar = px.bar(
 )
 st.plotly_chart(fig_bar, use_container_width=True)
 
----
+# ---
 
 # Dados Filtrados
 st.subheader("Dados Filtrados")
